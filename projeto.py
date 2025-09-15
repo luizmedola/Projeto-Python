@@ -18,3 +18,8 @@ driver = webdriver.Chrome(
 driver.get("https://www.google.com")
 
 time.sleep(2)
+
+search_box = driver.find_element(By.NAME, "q") 
+search_box.send_keys("Python Selenium tutorial")
+search_box.send_keys(Keys.RETURN)
+time.sleep(3)
